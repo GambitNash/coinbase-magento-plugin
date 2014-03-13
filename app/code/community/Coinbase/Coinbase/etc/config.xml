@@ -67,8 +67,7 @@
             <Coinbase>
                 <active>1</active>
                 <model>Coinbase/paymentMethod</model>
-                <title>Bitcoin</title>
- 
+                <title>Bitcoin via Coinbase</title>
                 <payment_action>authorize</payment_action>
                 <callback_secret>generate</callback_secret>
             </Coinbase>
