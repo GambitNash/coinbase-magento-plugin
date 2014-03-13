@@ -4,7 +4,7 @@
 		<payment>
 			<groups>
 				<Coinbase translate="label" module="paygate">
-					<label>Coinbase</label>
+					<label>Bitcoins via Coinbase</label>
 					<sort_order>700</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
