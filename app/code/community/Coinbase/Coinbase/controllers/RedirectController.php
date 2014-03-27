@@ -20,16 +20,11 @@ class Coinbase_Coinbase_RedirectController extends Mage_Core_Controller_Front_Ac
         
         $msg = "Your order has been cancelled.";
         $order->registerCancellation("Order was cancelled during checkout.")->save();
+        Mage::dispatchEvent('coinbase_order_cancelled', array('order_id' => $orderId));
       }
       
       Mage::getSingleton('core/session')->addError($msg);
       $this->_redirectUrl(Mage::getBaseUrl());
-    }
-    
-    public function oauthAction() {
-
-        $redirectUrlNoCode = Mage::getUrl("adminhtml/coinbaseoauth/redirect", array('_secure' => 1));
-        $this->_redirectUrl($redirectUrlNoCode . "key/$_GET[key]/?code=$_GET[code]&key=$_GET[key]");
     }
 
 }
